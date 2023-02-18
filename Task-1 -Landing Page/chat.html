@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pizza App</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<img src="logo.png" alt="Pizza App logo">
+		<a href="#" class="cta-button">Order Now</a>
+		<nav>
+			<ul>
+				<li><a href="#menu">Menu</a></li>
+				<li><a href="#locations">Locations</a></li>
+				<li><a href="#about-us">About Us</a></li>
+				<li><a href="#contact-us">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section id="hero">
+		<img src="pizza-image.jpg" alt="Delicious pizza">
+		<h1>Pizza delivery made easy</h1>
+	</section>
+
+	<section id="features">
+		<div>
+			<img src="fast-icon.png" alt="Fast and easy ordering">
+			<h3>Fast and easy ordering process</h3>
+			<p>Choose your toppings, crust and size in just a few clicks.</p>
+		</div>
+		<div>
+			<img src="toppings-icon.png" alt="Wide variety of toppings">
+			<h3>Wide variety of toppings and crusts to choose from</h3>
+			<p>From classic pepperoni to vegan cheese, we've got it all.</p>
+		</div>
+		<div>
+			<img src="tracking-icon.png" alt="Real-time tracking">
+			<h3>Real-time tracking of your order</h3>
+			<p>Know exactly when your pizza will arrive at your doorstep.</p>
+		</div>
+		<div>
+			<img src="secure-icon.png" alt="Secure payments">
+			<h3>Secure payment options</h3>
+			<p>Pay with your preferred method, without worrying about security.</p>
+		</div>
+		<div>
+			<img src="delivery-icon.png" alt="Fast delivery">
+			<h3>Delivery to your doorstep in under 30 minutes</h3>
+			<p>We pride ourselves on our speedy and reliable delivery service.</p>
+		</div>
+	</section>
+
+	<section id="menu">
+		<h2>Our Menu</h2>
+		<div>
+			<img src="pepperoni-pizza.jpg" alt="Pepperoni pizza">
+			<h3>Pepperoni Pizza</h3>
+			<p>A classic favorite with tomato sauce, mozzarella cheese, and spicy pepperoni.</p>
+			<span>$10.99</span>
+			<button>Add to Cart</button>
+		</div>
+		<div>
+			<img src="veggie-pizza.jpg" alt="Veggie pizza">
+			<h3>Veggie Pizza</h3>
+			<p>A healthy option with mushrooms, peppers, onions, olives and more.</p>
+			<span>$12.99</span>
+			<button>Add to Cart</button>
+		</div>
+		<!-- more pizza options -->
+	</section>
+
+	<section id="locations">
+		<h2>Our Locations</h2>
+		<p>Enter your address to see if we deliver to your area.</p>
+		<input type="text" placeholder="Enter your address">
+        <button>Check Address</button>
+        <div>
+        <h3>Downtown</h3>
+        <p>123 Main St, Suite 200<br>New York, NY 10001</p>
+        <p>Phone: (555) 555-5555</p>
+        <p>Hours: 11am-11pm daily</p>
+        </div>
+        <div>
+        <h3>Midtown</h3>
+        <p>456 5th Ave, 10th Floor<br>New York, NY 10018</p>
+        <p>Phone: (555) 555-5556</p>
+        <p>Hours: 11am-11pm daily</p>
+        </div>
+        <div>
+        <h3>Brooklyn</h3>
+        <p>789 Ocean Ave<br>Brooklyn, NY 11230</p>
+        <p>Phone: (555) 555-5557</p>
+        <p>Hours: 11am-11pm daily</p>
+        </div>
+    </section>
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p>We are a family-owned pizza delivery business with over 20 years of experience in the industry. Our goal is to provide our customers with high-quality pizza at an affordable price, delivered quickly and reliably to their doorstep.</p>
+        <p>Our pizzas are made with fresh, locally sourced ingredients and our menu offers a wide variety of toppings and crust options, including vegan and gluten-free options.</p>
+    </section>
+    
+    <section id="contact-us">
+        <h2>Contact Us</h2>
+        <p>Have a question or feedback? We'd love to hear from you!</p>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button>Send</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>Copyright © 2023 Pizza App</p>
+        <nav>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
+<style>
+    /* Global styles */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #333;
+	text-decoration: none;
+}
+
+.cta-button {
+	background-color: #ff7300;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none
+}
+
+.cta-button:hover {
+background-color: #ff8c00;
+}
+
+/* Hero section */
+
+#hero {
+background-image: url('https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_960_720.jpg');
+background-size: cover;
+background-position: center;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+#hero h1 {
+font-size: 4rem;
+color: #fff;
+margin-bottom: 20px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#hero p {
+font-size: 1.5rem;
+color: #fff;
+margin-bottom: 20px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button.hero {
+font-size: 1.2rem;
+padding: 10px 20px;
+border-radius: 5px;
+font-weight: bold;
+text-transform: uppercase;
+text-decoration: none;
+margin-bottom: 20px;
+}
+
+.cta-button.hero:hover {
+background-color: #ff8c00;
+}
+
+/* Locations section */
+
+#locations {
+padding: 50px;
+}
+
+#locations h2 {
+font-size: 3rem;
+margin-bottom: 20px;
+}
+
+#locations form {
+display: flex;
+margin-bottom: 20px;
+}
+
+#locations form input {
+flex-grow: 1;
+padding: 10px;
+font-size: 1.2rem;
+border: none;
+border-bottom: 2px solid #ff7300;
+margin-right: 10px;
+}
+
+#locations form button {
+background-color: #ff7300;
+color: #fff;
+padding: 10px 20px;
+border-radius: 5px;
+font-weight: bold;
+text-transform: uppercase;
+text-decoration: none;
+border: none;
+}
+
+#locations form button:hover {
+background-color: #ff8c00;
+}
+
+#locations div {
+background-color: #f1f1f1;
+padding: 20px;
+border-radius: 5px;
+margin-bottom: 20px;
+}
+
+#locations div h3 {
+font-size: 2rem;
+margin-bottom: 10px;
+}
+
+#locations div p {
+font-size: 1.2rem;
+margin-bottom: 10px;
+}
+
+/* About Us section */
+
+#about-us {
+padding: 50px;
+}
+
+#about-us h2 {
+font-size: 3rem;
+margin-bottom: 20px;
+}
+
+#about-us p {
+font-size: 1.2rem;
+line-height: 1.5;
+margin-bottom: 20px;
+}
+
+/* Contact Us section */
+
+#contact-us {
+padding: 50px;
+}
+
+#contact-us h2 {
+font-size: 3rem;
+margin-bottom: 20px;
+}
+
+#contact-us p {
+font-size: 1.2rem;
+line-height: 1.5;
+margin-bottom: 20px;
+}
+
+#contact-us form label {
+display: block;
+font-size: 1.2rem;
+margin-bottom: 10px;
+}
+
+#contact-us form input,
+#contact-us form textarea {
+display: block;
+padding: 10px;
+font-size: 1.2rem;
+border: none;
+border-bottom: 2px solid #ff7300;
+margin-bottom: 20px;
+width: 100%;
+}
+
+#contact-us form button {
+background-color: #ff7300;
+color: #fff;
+padding: 10px 20px;
+font-weight: bold;
+
+border-radius: 5px;
+font-weight: bold;
+text-transform: uppercase;
+text-decoration: none;
+border: none;
+}
+
+#contact-us form button:hover {
+background-color: #ff8c00;
+}
+
+#map {
+height: 500px;
+}
+
+/* Footer */
+
+footer {
+background-color: #333;
+color: #fff;
+padding: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+}
+
+footer p {
+font-size: 1.2rem;
+margin: 0;
+}
+
+.footer-links {
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-end;
+align-items: center;
+}
+
+.footer-links a {
+color: #fff;
+margin-left: 20px;
+font-size: 1.2rem;
+}
+
+.footer-links a:hover {
+color: #ff8c00;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+#locations div {
+flex-basis: 100%;
+}
+}
+
+@media (max-width: 480px) {
+#hero h1 {
+font-size: 3rem;
+}
+
+#hero p {
+	font-size: 1.2rem;
+}
+
+.cta-button.hero {
+	font-size: 1rem;
+}
+
+#locations h2 {
+	font-size: 2rem;
+}
+
+#locations form {
+	flex-direction: column;
+}
+
+#locations form input {
+	margin-right: 0;
+	margin-bottom: 10px;
+}
+
+#locations form button {
+	margin-bottom: 20px;
+}
+
+#about-us h2 {
+	font-size: 2rem;
+}
+
+#about-us p {
+	font-size: 1rem;
+}
+
+#contact-us h2 {
+	font-size: 2rem;
+}
+
+#contact-us p {
+	font-size: 1rem;
+}
+
+#contact-us form label {
+	font-size: 1rem;
+}
+
+#contact-us form input,
+#contact-us form textarea {
+	font-size: 1rem;
+}
+}
+
+@media (max-width: 360px) {
+#hero h1 {
+font-size: 2.5rem;
+}
+#hero p {
+	font-size: 1rem;
+}
+
+.cta-button.hero {
+	font-size: 0.8rem;
+}
+
+#locations h2 {
+	font-size: 1.5rem;
+}
+
+#locations form input {
+	font-size: 1rem;
+}
+
+#about-us h2 {
+	font-size: 1.5rem;
+}
+
+#about-us p {
+	font-size: 0.8rem;
+}
+
+#contact-us h2 {
+	font-size: 1.5rem;
+}
+
+#contact-us p {
+	font-size: 0.8rem;
+}
+
+#contact-us form label {
+	font-size: 0.8rem;
+}
+
+#contact-us form input,
+#contact-us form textarea {
+	font-size: 0.8rem;
+}
+}
+
+</style>
+<div id="hero">
+	<h1>Pizza App</h1>
+	<p>Order your favorite pizza online and get it delivered to your doorstep</p>
+	<a href="#locations" class="cta-button hero">Find a location</a>
+</div>
+<section id="locations">
+	<h2>Our Locations</h2>
+	<form>
+		<input type="text" placeholder="Enter your city or zip code">
+		<button>Search</button>
+	</form>
+	<div>
+        <h3>New York</h3>
+        <p>123 Main St.</p>
+        <p>New York, NY 10001</p>
+        <p>Phone: (555) 555-5555</p>
+        <h3>Los Angeles</h3>
+        <p>456 Elm St.</p>
+        <p>Los Angeles, CA 90001</p>
+        <p>Phone: (555) 555-5555</p>
+    </div>
+</section>
+<section id="about-us">
+	<h2>About Us</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed ex vel sapien vestibulum faucibus ac vel enim. Integer eget metus risus. Proin ut quam nec erat venenatis sagittis. Phasellus lorem lectus, vehicula id iaculis in, scelerisque ut libero. Duis scelerisque ipsum ut nisl blandit, non ullamcorper eros vestibulum. Proin ut finibus enim.</p>
+</section>
+<section id="contact-us">
+	<h2>Contact Us</h2>
+	<p>Got a question or feedback for us? Fill out the form below and we'll get back to you as soon as possible.</p>
+	<form>
+		<label for="name">Name</label>
+		<input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    
+        <button type="submit">Send</button>
+    </form>
+        
+</section>
+<div id="map"></div>
+<footer>
+	<p>&copy; 2023 Pizza App. All rights reserved.</p>
+	<div class="footer-links">
+		<a href="#">Terms of Service</a>
+		<a href="#">Privacy Policy</a>
+	</div>
+</footer>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+<script>
+	function initMap() {
+		var myLatLng = {lat: 40.712775, lng: -74.005973};
+
+		var map = new google.maps.Map(document.getElementById('map'), {
+			center: myLatLng,
+			zoom: 8
+		});
+
+		var marker = new google.maps.Marker({
+			position: myLatLng,
+			map: map,
+			title: 'New York'
+		});
+	}
+</script>
