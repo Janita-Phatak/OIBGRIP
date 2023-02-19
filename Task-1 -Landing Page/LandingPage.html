@@ -1,11 +1,18 @@
+
 <!DOCTYPE html>
 <html>
+
 <head>
     <title> Pizza Delivery App Landing Page</title>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  rel="stylesheet">
+
+    <link href="Style.css" rel="stylesheet">
+
+
 </head>
 <body style="margin: 0;">
 	<header>
@@ -58,7 +65,7 @@
 			  font-weight: normal;
 			  line-height: 1.5;">
 			  Italian Cuisine</h1>
-			  <p>Pizzas are a beloved and iconic dish in Italian cuisine, known for their thin crust, fresh ingredients, and variety of toppings.</p>
+			  <p style="color: white;">Pizzas are a beloved and iconic dish in Italian cuisine, known for their thin crust, fresh ingredients, and variety of toppings.</p>
 			  <div class="banner-buttons">
 				<button class="banner-button">Order Now</button>
 				<button class="banner-button">View Menu</button>
@@ -81,7 +88,7 @@
 			  letter-spacing: 1px;
 			  font-weight: normal;
 			  line-height: 1.5;">Tri Pizza</h1>
-				<p>"Indulge in a slice of heaven with every bite of our freshly baked pizza at Pizza DELICIOUS"</p>
+				<p style="padding-right: 150px;color: white;">"Indulge in a slice of heaven with every bite of our freshly baked pizza at Pizza DELICIOUS"</p>
 				<div class="banner-buttons">
 				<button class="banner-button">Order Now</button>
 				<button class="banner-button">View Menu</button>
@@ -130,6 +137,8 @@
 </div>
 
 </section>
+
+	<!-- HTML for the Intro -->
 <section class="ad-appeal" style="background-image: url('Images/bg_4.jpg');">
   <div class="ad-appeal-content">
 	<div class="ad-appeal-image">
@@ -147,290 +156,83 @@
   </div>
 </section>
 
+
+	<!-- HTML for the cards -->
+  <section class="services">
+    <div class="card">
+      <h2>Healthy Foods</h2>
+      <p style="color: #5c3d03;">Our pizzas are made with fresh, healthy ingredients that will leave you feeling great.</p>
+    </div>
+    <div class="card">
+      <h2>Fast Delivery</h2>
+      <p style="color: #5c3d03;">We pride ourselves on our speedy delivery, so you can enjoy your pizza while it's still hot.</p>
+    </div>
+    <div class="card">
+      <h2>Original Recipes</h2>
+      <p style="color: #5c3d03;">Our unique pizza recipes are sure to satisfy your cravings for something new and exciting.</p>
+    </div>
+  </section>
+  <footer class="footer-distributed">
+    <div class="footer-left">
+        <span>
+            <img src="Images/logo.png" alt="Pizza App logo" style="width: 90px; height: min-content; margin-top: -50px;"></span>
+        
+        <span style="font-family: Josefin Sans, Arial, sans-serif; letter-spacing: 3px; color: aliceblue; font-size: xx-large; margin-left: 70px; margin-top: -70px;  display: flex;  ">Pizza</span>
+        
+        <small style="margin-left: 50px; margin-top: 10px; display: flex;  letter-spacing: 5px; color: gold; font-family: Josefin Sans, Arial, sans-serif;">DELICIOUS
+            <sub style= "margin-left: 5px; margin-top: 10px;  display: flex;  letter-spacing: 1px; color: gold;  font-family: Josefin Sans, Arial, sans-serif;" >© 2023</sub></small> 
+    </div>
+
+    
+    <div class="footer-container">
+      <div class="loader">
+        <div class="footer1">
+          <div class="box"><div class="icon"><span class="fa fa-phone"></span></div></div>
+          <div class="text">
+            <h3>000 (123) 456 7890</h3>
+            <p>Pizza Delicious Office </p>
+          </div>
+        </div>
+        <div class="footer2">
+          <div class="box middle"><div class="icon"><span class="fa fa-map-marker"></span></div></div>
+          <div class="text">
+            <h3>12, JayPrakash Nagar</h3>
+            <p>Goregaon, Mumbai, India 800013</p>
+          </div>
+        </div>
+        <div class="footer3">
+          <div class="box"><div class="icon"><span class="fa fa-clock-o"></span></div></div>
+          <div class="text">
+            <h3>Open Monday-Friday</h3>
+            <p>8:00am - 9:00pm</p>
+          </div>
+        </div>
+      </div> 
+      </div>
+      
+ 
+        <div class="footer-right">
+            <p class="footer-company-about">
+              <span>Connect us on</span>
+            </p>
+            <div class="footer-icons">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-github"></i></a>
+            </div> 
+          </div>
+
+          <div class bottom>
+            <p>&copy; 2023 Pizza Delicious. All rights reserved.</p>
+          </div>
+</footer>
+
 </body>
 </html>
 
-<style>
-
-*{
-    font-family: Josefin Sans, Arial, sans-serif;
-}
-
-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px;
-	background-color: black;
-	box-shadow: 0px 3px 3px rgba(124, 123, 123, 0.1);
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-    z-index: 10;
-}
-.navbar-brand {
-  display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
-  white-space: nowrap; }
-  .navbar-brand:hover, .navbar-brand:focus {
-    text-decoration: none; }
-nav ul {
-	display: flex;
-	list-style: none;
-   
-}
-
-nav li {
-	margin-right: 30px;
-
-}
-
-nav a {
-	color: #333;
-	text-decoration: none;
-    color: #8f8f8f;
-    font-size: 20px;
-    font-weight: 400;
-    transition: all 0.5s ease-in-out;
-    position: relative;
-    text-transform: uppercase;
-    
-}
-
-nav a.active,
-nav a:hover {
-    color: #ffd700; /* Golden color */
-}
-
-nav a:not(:hover):not(.active)  {
-    color: #8f8f8f; /* Original color */
-}
-
-
-
-.bannerr {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: url(Images/bg_1.jpg) no-repeat center center fixed;
-    background-size: cover;
-    height: 90vh;
-    margin-top: 85px;
-    left: 0;
-    right: 0;
-	
-}
-
-.banner-text {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align:center;
-    color: #fff;
-    z-index: 2;
-	transform: translateY(-50%);
-	transform: translateX(-50%);
-	transition: transform 1s ease; 
-}  
-
-.banner-heading {
-    font-size: 5em;
-    margin-bottom: 0;
-
-}
-
-.banner-subheading {
-    font-size: 2em;
-    margin-top: 0;
-}
-
-.banner-buttons {
-    margin-top: 2em;
-}
-
-.banner-button {
-    background-color: goldenrod;
-    color: black;
-    font-size: 1.2em;
-    padding: 1em 2em;
-    border: none;
-    border-radius: 25px;
-    margin-right: 1em;
-    cursor: pointer;
-}
-
-.banner-button:hover {
-    background-color: orangered;
-    color: #fff;
-}
-.banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.banner:first-child {
-  opacity: 1;
-}
-  .banner-image {
-	position: absolute;
-  }
-  
-  .banner-image-left {
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 1;
-  }
-
-.banner-image-right {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-.banner-image-right img {
-  order: 2;
-  margin-left: 800px;
-
-}
-.banner-image-right .banner-text {
-  order: 1;
-  flex-basis: 100%;
-  margin-top: 300px;
-  margin-left: -300px;
-
-}
-
-.banner-image-left {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-.banner-image-left img {
-  order: 2;
-  margin-left: 0px;
-}
-
-.banner-image-left .banner-text {
-  order: 1;
-  flex-basis: 100%;
-  margin-top: 300px;
-  margin-right: -900px;
-  margin-left: 600px;
-  
-}
-  .banner-image-Welcome {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 0;
-	transition: transform 1s ease; /* Add a transition effect */
-  }
-
-
-.banner-text .subheading {
-  padding-top: 50px;
-  font-family: "Nothing You Could Do", cursive;
-  font-size: 30px;
-  color: #f3a20b;
-  text-shadow: 2px 2px rgb(252, 251, 248);
-}
-
-.dot-container {
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-  cursor: pointer;
-}
-
-.dot-container .active, .dot:hover {
-  background-color: #717171;
-}
-.ad-appeal {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ad-appeal-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.ad-appeal-image {
-  flex-basis: 50%;
-}
-
-.ad-appeal-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.ad-appeal-text {
-  flex-basis: 50%;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.ad-appeal-text h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  color: rgb(245, 182, 8);
-}
-
-.ad-appeal-text p {
-  font-family: "Poppins", Arial, sans-serif;
-    background: #121618;
-    font-size: 15px;
-    line-height: 1.8;
-    font-weight: 300;
-    color: gray;
-}
-
-</style>
-
 <script>
-const navLinks = document.querySelectorAll('nav a');
+	const navLinks = document.querySelectorAll('nav a');
 const homeLink = navLinks[0]; // Assumes "Home" link is the first link in the navigation
 
 navLinks.forEach(link => {
@@ -466,4 +268,72 @@ dots.forEach((dot, i) => {
   });
 });
 
+ // JavaScript to add animation classes on scroll
+ const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-up');
+    } else {
+      entry.target.classList.remove('animate-up');
+    }
+  });
+});
+
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+  observer.observe(card);
+});
+
+
+// Get all the icon elements
+const icons = document.querySelectorAll('.footer-icons .fa');
+
+// Set the initial icon index to 0
+let currentIconIndex = 0;
+
+// Define a function to change the color of the icons
+function changeIconColor() {
+  // Set the color of the current icon to blue
+  icons[currentIconIndex].style.color = '#14c0eb';
+
+  // Set the color of the previous icon to white
+  if (currentIconIndex > 0) {
+    icons[currentIconIndex - 1].style.color = '#fff';
+  } else {
+    icons[icons.length - 1].style.color = '#fff';
+  }
+
+  // Increment the icon index
+  currentIconIndex = (currentIconIndex + 1) % icons.length;
+}
+
+// Call the changeIconColor function every 2 seconds
+setInterval(changeIconColor, 2000);
+
+const adAppealText = document.querySelector('.ad-appeal-text');
+  const adAppealTrigger = document.querySelector('.ad-appeal');
+
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function checkAdAppealText() {
+    if (isElementInViewport(adAppealTrigger)) {
+      adAppealText.classList.add('animated');
+    } else {
+      adAppealText.classList.remove('animated');
+    }
+  }
+
+  window.addEventListener('scroll', checkAdAppealText);
+  window.addEventListener('resize', checkAdAppealText);
+
+
 </script>
+
