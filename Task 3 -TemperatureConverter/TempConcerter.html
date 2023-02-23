@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="Cal.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Temperature Converter</title>
+    
+  </head>
+  <body>
+    <div class="container">
+      <h1>Temperature Converter</h1>
+      <form id="converter">
+        <div class="input-container">
+          <label for="temp">Temperature:</label>
+          <input type="number" id="temp" name="temp" required>
+        </div><p>=</p>
+       
+        <div id="result"></div>
+
+        <div class="button-container">
+          <button type="button" class="num-button">0</button>
+          <button type="button" class="num-button">1</button>
+          <button type="button" class="num-button">2</button>
+          <button type="button" class="num-button">3</button>
+          <button type="button" class="num-button">4</button>
+          <button type="button" class="num-button">5</button>
+          <button type="button" class="num-button">6</button>
+          <button type="button" class="num-button">7</button>
+          <button type="button" class="num-button">8</button>
+          <button type="button" class="num-button">9</button>
+          <button type="button" class="num-button">-</button>
+          <button type="button" class="num-button">Back</button>
+        </div>
+
+        <div class="convert-from-container">
+          <label>Convert From:</label>
+          <button type="button" class="unit-button">Celsius</button>
+          <button type="button" class="unit-button">Fahrenheit</button>
+          <button type="button" class="unit-button">Kelvin</button>
+        </div>
+        
+        <div class="convert-to-container">
+          <label>Convert To:</label>
+          <button type="button" class="unit-button">Celsius</button>
+          <button type="button" class="unit-button">Fahrenheit</button>
+          <button type="button" class="unit-button">Kelvin</button>
+        </div>
+          
+          <button type="button" class="clear-button">Clear</button>
+        
+        <button type="submit" class="convert-button">Convert</button>
+      </form>
+    </div>
+    
+    <script src="cal.js"></script>
+  </body>
+</html>
+<style>
+
+</style>
+

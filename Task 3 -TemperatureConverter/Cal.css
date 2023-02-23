@@ -1,0 +1,198 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("pics/d.jpg");
+    background-size: cover;
+    background-position: center;
+  
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(63, 56, 56, 0.3);
+    background-image: linear-gradient(to bottom left, pink,rgb(153, 153, 202), white);
+  }
+      
+      h1 {
+        text-align: center;
+        margin-top: 0;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      input[type="number"] {
+        width: 50%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+      }
+
+      .input-container {
+        display: flex;
+        align-items: center;
+      }
+      
+      .input-container input[type="number"],
+      .input-container p {
+        margin: 0 10px;
+      }
+      
+      #result {
+        width: 100px;
+        height: 40px;
+        background-color: #fff;
+        border: 1px solid rgb(8, 8, 8);
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+      }
+      
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+      }
+      
+      button {
+        display: block;
+        margin: 20px auto 0;
+        padding: 10px 20px;
+        background-color: #000000;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+   
+      
+
+      .button-container {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      
+        .unit-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 120px;
+          height: 60px;
+          font-size: 24px;
+          border: 1px solid #fff;
+          background-color: rgb(7, 7, 7);
+          cursor: pointer;
+        }
+      
+        .unit-button:hover {
+          background-color: #2ecc71;
+        }
+      
+        .unit-button:active {
+          background-color: #2ecc71;
+        }
+      
+        .num-button,
+        .unit-button,
+        .clear-button {
+          height: 60px;
+          font-size: 24px;
+          border: 1px solid rgb(255, 255, 255);
+          background-color: rgb(0, 0, 0);
+        }
+      
+        .convert-from-container,
+        .convert-to-container {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+      
+        }
+      
+       .convert-to-container {padding-left: 20px;}
+      
+      
+      .num-button:hover,
+      .clear-button:hover {
+        background-color: #ffffff;
+        border: 1px solid rgb(0, 0, 0);
+        color: black;
+        filter: blur(80%);
+      }
+      
+   
+      .clear-button:hover,
+      .clear-button:active {
+        background-color: rgb(247, 203, 11);
+      }
+      
+      .convert-button:hover
+      {
+        background-color: #8b162f;
+        color: #000000;
+      }
+
+      .convert-from-container .unit-button.active,
+      .convert-to-container .unit-button.active {
+      background-color: #1bc031;
+      color: #000000;
+}
+      
+      .convert-button {
+        display: block;
+        width: 100%;
+        height: 60px;
+        font-size: 24px;
+        background-color:rgb(243, 14, 14);
+        color: #fff;
+        border:1px;
+      }
+      
+      .convert-from-container,
+      .convert-to-container {
+        display: flex;
+        align-items: center
+      ;
+      }
+      
+      .convert-from-container label,
+      .convert-to-container label {
+      margin-right: 10px;
+      }
+      
+      .convert-from-container button,
+      .convert-to-container button {
+      height: 60px;
+      font-size: 22px;
+      background-color: rgb(0, 0, 0);
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      cursor: pointer;
+      
+      }
+      
+      .convert-from-container button:hover,
+      .convert-to-container button:hover {
+      background-color:  #ffffff;
+      border: 1px solid rgb(0, 0, 0);
+      color: black;
+      }
+      
+      .convert-from-container button:active,
+      .convert-to-container button:active {
+      background-color:  #2ecc71;
+      }
+      
