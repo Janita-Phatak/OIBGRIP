@@ -2,6 +2,7 @@
 <head>
     <title>Portfolio </title>
     <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
@@ -19,37 +20,37 @@
       <div class="btn-line"></div>
     </div>
     <ul class="link-group link-group large-screen">
-      <li class="link active"><a href="#">home</a></li>
-      <li class="link"><a href="#">about</a></li>
-      <li class="link"><a href="#">skills</a></li>
-      <li class="link"><a href="#">education</a></li>
-      <li class="link"><a href="#">achievements</a></li>
-      <li class="link"><a href="#">project</a></li>
-      <li class="link"><a href="#">contact</a></li>
+      <li class="link active"><a href="#home">home</a></li>
+      <li class="link"><a href="#about">about</a></li>
+      <li class="link"><a href="#skills">skills</a></li>
+      <li class="link"><a href="#education">education</a></li>
+      <li class="link"><a href="#achievements">achievements</a></li>
+      <li class="link"><a href="#project">project</a></li>
+      <li class="link"><a href="#contact">contact</a></li>
     </ul>
   </nav>
 
 <!-- home section -->
 
-<section class="home-section active">
-    <h1 class="hero-heading">hello, i am <br> Janita</h1>
-    <img src="img/I.png" class="home-img" alt="">
+<section  id="home" class="home-section active">
+    <h1 class="hero-heading">hello, i am <br> <span id="name"></span></h1>
+    <img src="img/Mypic1.png" class="home-img" alt="">
 </section>
 
 <!-- about section -->
 
-<section class="about-section active" >
-    <h1 class="heading">about me</h1>
+<section class="about-section active" id="about" >
+    <h1   class="heading" style="margin-top: 100px;">about me</h1>
     <!-- about -->
     <div class="about-container">
         <div class="image-container">
             <div class="square"></div>
-            <img src="img/I.png" class="about-img" alt="">
+            <img src="img/I.PNG" class="about-img" alt="" style="filter: brightness(40%);">
             <a href="#" class="btn" onclick="downloadCV()">download CV</a>
         </div>
 
         <!-- info part -->
-        <div class="info animate">
+        <div class="info">
             <p>
                Hello, my name is Janita Phatak. I am a technology enthusiast who is passionate about exploring new technologies and experimenting with creative coding. 
                I have always been fascinated by the potential of IT Industry,
@@ -75,7 +76,7 @@
 
 
 <!-- skills part -->
-<section class= "skills-section active">
+<section id="skills" class= "skills-section active">
 <h2 class="sub-heading">skills</h2>
 
 <div class="skills">
@@ -95,9 +96,9 @@
 
 
 <!-- education -->
-<section  class="education-section active">
+<section id="education" class="education-section active">
 <div>
-    <h1 class="heading">education and experience</h1>
+    <h1 class="heading" style="padding-top: 90px;">education and experience</h1>
     <div class="cardE">
         <div class="card-body">
             <h1 class="card-title">2023</h1>
@@ -142,8 +143,8 @@
 
 <!-- Acheivements -->
 
-<section class="achievements-section active" >
-    <h2 class="achievement heading">Achievements</h2>
+<section  id="achievements" class="achievements-section active" >
+  <h2 class="achievement heading achievements-heading">Achievements</h2>
   
         <div class="card-container">
           <div class="card">
@@ -208,7 +209,7 @@
 
 <!-- project section -->
 
-<section class="project-section active">
+<section  id="project" class="project-section active">
     <h1 class="project-heading">some of my projects</h1>
     <div class="project-container">
         <div class="project-card">
@@ -216,23 +217,29 @@
             <div class="project-content">
                 <h1 class="project-title">FixMyCity</h1>
                 <p class="project-info">
-                   It is a web application,  
+                   It is a web application,to automate the management of
+                   various civic issues - Debris of garbage, Potholes, Damaged Street lamps, blocked sever line, etc.
+                   It will help to build a better communicational channel between people and authorities which will help in to find feasible
+                   solution in collaborative manner.
+                     
                 </p>
                 
-                    <button class="project-btn github">github repo</button> 
+                    <button class="project-btn github" onclick="Repo1()">github repo</button> 
               
             </div>
         </div>
         <div class="project-card">
-            <img src="img/I.png" class="project-img" alt="">
+            <img src="img/jan1.JPG" class="project-img" alt="" style="filter: brightness(20%);">
             <div class="project-content">
                 <h1 class="project-title">LibraryManagement</h1>
                 <p class="project-info">
-                    It is a vue based project.
+                  The Vue-based library management system is a software solution designed to 
+                  help manage books and customers in a library. It provides functions such as adding, editing, 
+                  and deleting books, tracking customer borrowing history, and generating reports.
                 </p>
                
-                    <button class="project-btn github">github repo</button>
-             
+                    <button class="project-btn github" onclick="Repo2()">github repo</button>
+                   
             </div>
         </div>
     </div>
@@ -241,7 +248,7 @@
 
 
 <!-- contact section -->
-<section class="contact-section active">
+<section  id="contact" class="contact-section active">
 <footer class="footer-distributed">
 
 <div class="footer-container">
@@ -250,7 +257,7 @@
         <div class="box"></div><div class="icon"><span class="fa fa-phone"></span></div>
         <div class="text">
           <h3>Phone Number  </h3>
-          <p>+91 9833852917</p>
+          <p>+91 9833xxxxx</p>
         </div>
       </div>
       <div class="footer2">

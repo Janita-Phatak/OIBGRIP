@@ -1,20 +1,3 @@
-const links = document.querySelectorAll('.navbar .link');
-const sections = document.querySelectorAll('section');
-
-let activeLink = 0;
-
-links.forEach((link, i) => {
-    link.addEventListener('click', () => {
-        if(activeLink != i){
-            links[activeLink].classList.remove('active');
-            link.classList.add('active');
-            sections[activeLink].classList.remove('active');
-            sections[i].classList.add('active');
-            activeLink = i;
-        }
-    })
-})
-
 const menuBtn = document.querySelector('.menu-btn-toggle');
   const linkGroup = document.querySelector('.link-group');
   
@@ -56,69 +39,84 @@ function downloadCV() {
 }
 
 
-const achievementsSection = document.querySelector('.achievements-section');
+
+function Repo1() {
+  window.open("https://github.com/Janita-Phatak/V-FixMyCity/tree/master"); // replace with your own GitHub repo URL
+}
+
+function Repo2() {
+  window.open("https://github.com/Janita-Phatak/Library-Management/tree/master"); // replace with your own GitHub repo URL
+}
+
+
+const info = document.querySelector('.info');
+const options = {
+  rootMargin: '-50px 0px',
+  threshold: 0
+};
+
+function animateOnScroll() {
+  const topInView = info.getBoundingClientRect().top < window.innerHeight;
+  const bottomInView = info.getBoundingClientRect().bottom > 0;
+  if (topInView && bottomInView) {
+    info.classList.add('visible');
+  } else {
+    info.classList.remove('visible');
+  }
+}
+
+window.addEventListener('scroll', animateOnScroll);
+
+const name = "Janita";
+const nameElem = document.getElementById("name");
+
+for (let i = 0; i < name.length; i++) {
+  setTimeout(function() {
+    nameElem.textContent += name[i];
+  }, i * 400);
+}
+
+
+
 const cards = document.querySelectorAll('.card');
-let currentIndex = 0;
-let animationInterval;
 
-function animateCards(startIndex = 0) {
-  // Remove zoom class from all cards
-  cards.forEach(card => card.classList.remove('zoom'));
-
-  // Add zoom class to the current card
-  cards[startIndex].classList.add('zoom');
-
-  // Start the animation loop
-  animationInterval = setInterval(() => {
-    // Remove zoom class from all cards
-    cards.forEach(card => card.classList.remove('zoom'));
-
-    // Add zoom class to the current card
-    cards[currentIndex].classList.add('zoom');
-
-    // Increment index or reset to 0 if at end of array
-    currentIndex = (currentIndex + 1) % cards.length;
-  }, 1500);
-}
-
-function startAnimation(startIndex = 0) {
-  animateCards(startIndex);
-}
-
-function stopAnimation() {
-  // Stop the animation loop
-  clearInterval(animationInterval);
-}
-
-// Stop the animation loop if the user hovers over a card
 cards.forEach((card, index) => {
+  card.style.setProperty('--card-index', index);
+
   card.addEventListener('mouseenter', () => {
-    stopAnimation();
-    // Zoom in the current card
-    cards.forEach(card => card.classList.remove('hover'));
-    cards[index].classList.add('hover');
-    currentIndex = index;
+    card.classList.add('is-hovered');
   });
+
   card.addEventListener('mouseleave', () => {
-    // Zoom out the current card
-    cards[index].classList.remove('hover');
-    // Resume the animation loop from the current card
-    startAnimation(currentIndex);
+    card.classList.remove('is-hovered');
   });
 });
 
-const infoElement = document.querySelector('.info');
 
-window.addEventListener('scroll', () => {
-    const infoRect = infoElement.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
 
-    if (infoRect.top < windowHeight * 0.75) {
-        infoElement.classList.add('animate');
+
+// Add "active" class to first link by default
+document.querySelector('.link:first-child').classList.add('active');
+
+window.addEventListener('scroll', function() {
+  const navLinks = document.querySelectorAll('.link');
+  const sections = document.querySelectorAll('section');
+  let currentSectionIndex = 0;
+  
+  // Loop through the sections to find the one currently in view
+  for (let i = 0; i < sections.length; i++) {
+    const sectionTop = sections[i].getBoundingClientRect().top;
+    const sectionBottom = sections[i].getBoundingClientRect().bottom;
+    
+    // Check if section is in view (at least 50% of it)
+    if (sectionTop <= (window.innerHeight / 2) && sectionBottom >= (window.innerHeight / 2)) {
+      currentSectionIndex = i;
     }
+  }
+  
+  // Remove "active" class from all links
+  navLinks.forEach((link) => link.classList.remove('active'));
+  
+  // Add "active" class to corresponding link
+  navLinks[currentSectionIndex].classList.add('active');
 });
-
-
-
-
-
