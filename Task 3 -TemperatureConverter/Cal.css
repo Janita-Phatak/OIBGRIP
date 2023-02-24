@@ -172,6 +172,7 @@ button {
 .radio-group {
   display: flex;
   flex-wrap: wrap;
+  padding: 4px;
   justify-content: center;
   align-items: center;
 }
@@ -196,6 +197,9 @@ button {
   border: 1px solid #f8a500;
 }
 
+.radio-group label.selected {
+  background-color: #2ecc71;
+}
 
 #popup {
   display: none;

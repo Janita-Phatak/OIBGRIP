@@ -1,5 +1,18 @@
 $(document).ready(function() {
 
+// Change the label color of the selected radio button on page load
+$(".radio-group input[type='radio']:checked").parent().addClass("selected");
+
+// Listen for changes to the radio buttons
+$(".radio-group input[type='radio']").on("change", function() {
+  // Remove the "selected" class from all labels
+  $(this).parents(".radio-group").find("label").removeClass("selected");
+  
+  // Add the "selected" class to the label of the selected radio button
+  $(this).parent().addClass("selected");
+});
+
+
   // Listen to click events on the number buttons and update the temperature input field accordingly
   $(".num-button").click(function() {
     var tempInput = $("#temp");
