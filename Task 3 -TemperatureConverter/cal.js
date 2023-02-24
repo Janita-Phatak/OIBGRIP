@@ -1,9 +1,5 @@
 $(document).ready(function() {
 
-  // Define fromUnit and toUnit variables
-  let fromUnit = null;
-  let toUnit = null;
-
   // Listen to click events on the number buttons and update the temperature input field accordingly
   $(".num-button").click(function() {
     var tempInput = $("#temp");
@@ -22,43 +18,38 @@ $(document).ready(function() {
     }
   });
 
+
   // Event handler for convert from unit buttons
-  $('.convert-from-container .unit-button').click(function() {
-    $('.convert-from-container .unit-button').removeClass('active');
-    $(this).addClass('active');
+  $('input[name="unit-from"]').click(function() {
+    fromUnit = $('input[name="unit-from"]:checked').val();
+    
+  });
+  
+  // Event handler for convert to unit buttons
+  $('input[name="unit-to"]').click(function() {
+    toUnit = $('input[name="unit-to"]:checked').val();
   });
 
-  // Event handler for convert to unit buttons
-  $('.convert-to-container .unit-button').click(function() {
-    $('.convert-to-container .unit-button').removeClass('active');
-    $(this).addClass('active');
-  });
 
   // clear selection
   $('.clear-button').on('click', function() {
     $("#temp").val("");
-    $('.unit-button').removeClass('active');
     $('#result').html('Answer');
-    fromUnit = null;
-    toUnit = null;
-  });
+    $("input[type='radio']").prop('checked', false);
 
-  // Listen to click events on the unit buttons and update from/to units accordingly
-  $(".unit-button").click(function() {
-    if ($(this).parent().hasClass("convert-from-container")) {
-      fromUnit = $(this).text();
-    } else {
-      toUnit = $(this).text();
-    }
   });
 
   // Listen to submit events on the form and prevent the default form submission behavior
   $("#converter").submit(function(event) {
     event.preventDefault();
-    
+      
     // Get the temperature value from the input field
     var tempVal = $("#temp").val();
     var parsedTemp = parseFloat(tempVal);
+
+    // Get the selected radio buttons
+    var fromUnit = $("input[name='unit-from']:checked").val();
+    var toUnit = $("input[name='unit-to']:checked").val();
 
     // Check if both "Convert from" and "Convert to" units are selected
     if (!fromUnit || !toUnit) {
@@ -71,25 +62,25 @@ $(document).ready(function() {
     if (fromUnit === toUnit) {
       convertedTemp = parsedTemp;
     }
-    else if (fromUnit === "Celsius" && toUnit === "Fahrenheit") {
+    else if (fromUnit === "celsius" && toUnit === "fahrenheit") {
       convertedTemp = (parsedTemp * 9/5) + 32;
     }
-    else if (fromUnit === "Celsius" && toUnit === "Kelvin") {
+    else if (fromUnit === "celsius" && toUnit === "kelvin") {
       convertedTemp = parsedTemp + 273.15;
     }
-    else if (fromUnit === "Fahrenheit" && toUnit === "Celsius") {
+    else if (fromUnit === "fahrenheit" && toUnit === "celsius") {
       convertedTemp = (parsedTemp - 32) * 5/9;
     }
-    else if (fromUnit === "Fahrenheit" && toUnit === "Kelvin") {
+    else if (fromUnit === "fahrenheit" && toUnit === "kelvin") {
       convertedTemp = (parsedTemp + 459.67) * 5/9;
     }
-    else if (fromUnit === "Kelvin" && toUnit === "Celsius") {
+    else if (fromUnit === "kelvin" && toUnit === "celsius") {
       convertedTemp = parsedTemp - 273.15;
     }
-    else if (fromUnit === "Kelvin" && toUnit === "Fahrenheit") {
+    else if (fromUnit === "kelvin" && toUnit === "fahrenheit") {
       convertedTemp = (parsedTemp * 9/5) - 459.67;
     }
-
+    
     // Display the converted temperature value
 $("#result").html(convertedTemp.toFixed(2) + " " + toUnit);
 

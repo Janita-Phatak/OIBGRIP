@@ -36,16 +36,20 @@
 
         <div class="convert-from-container">
           <label>Convert From:</label>
-          <button type="button" class="unit-button">Celsius</button>
-          <button type="button" class="unit-button">Fahrenheit</button>
-          <button type="button" class="unit-button">Kelvin</button>
+          <div class="radio-group">
+            <label><input type="radio" name="unit-from" value="celsius">Celsius</label>
+            <label><input type="radio" name="unit-from" value="fahrenheit">Fahrenheit</label>
+            <label><input type="radio" name="unit-from" value="kelvin">Kelvin</label>
+          </div>
         </div>
         
         <div class="convert-to-container">
           <label>Convert To:</label>
-          <button type="button" class="unit-button">Celsius</button>
-          <button type="button" class="unit-button">Fahrenheit</button>
-          <button type="button" class="unit-button">Kelvin</button>
+          <div class="radio-group">
+            <label><input type="radio" name="unit-to" value="celsius">Celsius</label>
+            <label><input type="radio" name="unit-to" value="fahrenheit">Fahrenheit</label>
+            <label><input type="radio" name="unit-to" value="kelvin">Kelvin</label>
+          </div>
         </div>
           
           <button type="button" class="clear-button">Clear</button>

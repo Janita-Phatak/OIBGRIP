@@ -164,6 +164,11 @@ button {
   margin-right: 10px;
 }
 
+
+.radio-group input{
+  display: none;
+}
+
 .radio-group {
   display: flex;
   flex-wrap: wrap;
@@ -189,11 +194,6 @@ button {
   color: #086a8f;
   background-color: #f8a500;
   border: 1px solid #f8a500;
-}
-
-.radio-group input[type="radio"]:checked + label {
-  background-color: #2ecc71;
-  color: white;
 }
 
 
