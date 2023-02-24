@@ -13,10 +13,11 @@
       <form id="converter">
         <div class="input-container">
           <label for="temp">Temperature:</label>
-          <input type="number" id="temp" name="temp" required>
-        </div><p>=</p>
+          <input type="number" id="temp" name="temp" placeholder="Please enter temperature here" required>
+          <p>=</p>
        
-        <div id="result"></div>
+          <div id="result">Answer</div>
+        </div>
 
         <div class="button-container">
           <button type="button" class="num-button">0</button>
@@ -51,6 +52,13 @@
         
         <button type="submit" class="convert-button">Convert</button>
       </form>
+    </div>
+
+    <div id="popup">
+      <div id="popup-content">
+        <span class="close">&times;</span>
+        <p>Please select both 'from' and 'to' temperature units before converting.</p>
+      </div>
     </div>
     
     <script src="cal.js"></script>

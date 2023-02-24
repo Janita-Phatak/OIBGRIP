@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+  // Define fromUnit and toUnit variables
+  let fromUnit = null;
+  let toUnit = null;
+
   // Listen to click events on the number buttons and update the temperature input field accordingly
   $(".num-button").click(function() {
     var tempInput = $("#temp");
@@ -34,7 +38,9 @@ $(document).ready(function() {
   $('.clear-button').on('click', function() {
     $("#temp").val("");
     $('.unit-button').removeClass('active');
-    $('#result').html('');
+    $('#result').html('Answer');
+    fromUnit = null;
+    toUnit = null;
   });
 
   // Listen to click events on the unit buttons and update from/to units accordingly
@@ -53,6 +59,12 @@ $(document).ready(function() {
     // Get the temperature value from the input field
     var tempVal = $("#temp").val();
     var parsedTemp = parseFloat(tempVal);
+
+    // Check if both "Convert from" and "Convert to" units are selected
+    if (!fromUnit || !toUnit) {
+      $('#popup').show();
+      return;
+    }
     
     // Convert the temperature value to the target unit
     let convertedTemp;
@@ -83,4 +95,11 @@ $("#result").html(convertedTemp.toFixed(2) + " " + toUnit);
 
 });
 
+// Hide the popup when the close button is clicked
+$('#popup .close').click(function() {
+  $('#popup').hide();
 });
+
+});
+
+

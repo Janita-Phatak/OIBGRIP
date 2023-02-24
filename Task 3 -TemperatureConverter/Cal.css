@@ -19,37 +19,42 @@ body {
     background-image: linear-gradient(to bottom left, pink,rgb(153, 153, 202), white);
   }
       
-      h1 {
-        text-align: center;
-        margin-top: 0;
+  h1 {
+      text-align: center;
+       margin-top: 0;
+    }
+      
+  label {
+      display: block;
+      padding: 20px
+    }
+      
+      .input-container {
+        display: flex;
+        justify-content: center;
       }
       
-      label {
-        display: block;
-        margin-bottom: 10px;
-      }
-      
-      input[type="number"] {
+      .input-container input[type="number"] {
+        margin: 0 10px;
         width: 50%;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 3px;
         font-size: 16px;
       }
-
-      .input-container {
-        display: flex;
-        align-items: center;
-      }
       
-      .input-container input[type="number"],
       .input-container p {
         margin: 0 10px;
+        padding: 20px;
+        font-size: larger;
+        font-weight: bolder;
       }
       
       #result {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100px;
-        height: 40px;
         background-color: #fff;
         border: 1px solid rgb(8, 8, 8);
         padding: 10px;
@@ -142,7 +147,6 @@ body {
       .convert-button:hover
       {
         background-color: #8b162f;
-        color: #000000;
       }
 
       .convert-from-container .unit-button.active,
@@ -195,4 +199,38 @@ body {
       .convert-to-container button:active {
       background-color:  #2ecc71;
       }
+
+      #popup {
+        display: none;
+        position: fixed;
+        justify-content: center;
+        z-index: 1;
+        width: 30%;
+        overflow: auto;
+       
+      }
+      
+
+      #popup-content {
+        background-color: white;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        border: 5px solid red;
+      }
+      
+      .close {
+        float: right;
+        font-size: 35px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #8b162f;
+
+      }
+      
+      .close:hover {
+        color: #000;
+      }
+      
       
